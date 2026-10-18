@@ -77,3 +77,87 @@ const check = (label, ok) => console.log(`${ok ? "✓" : "✗"} ${label}`);
 //   git commit -m "Add: create and remove elements"
 //   git push
 // ============================================
+
+
+// ============================================
+// STEP 1 – Task 9.1: Select TEN ways. Store each in a const, then log it.
+// ============================================
+
+// TODO 1 – the h1
+const h1 = document.querySelector("h1");
+console.log(h1);
+
+// TODO 2 – all elements with class "content"
+const contentElements = document.querySelectorAll(".content");
+console.log(contentElements);
+
+// TODO 3 – the form with id "contact-form" (use getElementById – no #)
+const contactForm = document.getElementById("contact-form");
+console.log(contactForm);
+
+// TODO 4 – the email input INSIDE the form
+const emailInput = document.querySelector("#contact-form input[type='email']");
+console.log(emailInput);
+
+// TODO 5 – all list items in the nav
+const navListItems = document.querySelectorAll("nav li");
+console.log(navListItems);
+
+// TODO 6 – the first .nav-link
+const firstNavLink = document.querySelector(".nav-link");
+console.log(firstNavLink);
+
+// TODO 7 – the last paragraph in the article
+const lastParagraph = document.querySelector("article p:last-of-type");
+console.log(lastParagraph);
+
+// TODO 8 – the submit button
+const submitButton = document.querySelector("button[type='submit']");
+console.log(submitButton);
+
+// TODO 9 – every h2 inside main
+const mainH2s = document.querySelectorAll("main h2");
+console.log(mainH2s);
+
+// TODO 10 – the footer
+const footer = document.querySelector("footer");
+console.log(footer);
+
+// Extra 1: What does this return?
+console.log(document.querySelector(".does-not-exist")); // null
+
+// Extra 2: Turn the nav items NodeList into an array of their text
+const navTexts = [...navListItems].map(item => item.textContent);
+console.log(navTexts);
+
+
+// ============================================
+// STEP 2 – Task 9.2: traverse. Say the route out loud before you write it.
+// ============================================
+
+// TODO 1 – from the header, find the nav inside it
+const header = document.querySelector("header");
+const navInHeader = header.querySelector("nav");
+console.log(navInHeader);
+
+// TODO 2 – from the first .nav-link, get its parent li
+const parentLi = firstNavLink.parentElement;
+console.log(parentLi);
+
+// TODO 3 – from the article, get its next sibling (should be a section)
+const article = document.querySelector("article");
+const nextSibling = article.nextElementSibling;
+console.log(nextSibling);
+
+// TODO 4 – from the ul, get all its child li elements
+const ul = document.querySelector("ul.nav-list");
+const childLis = ul.children;
+console.log(childLis);
+
+// TODO 5 – from the footer, go up to the body
+const body = footer.parentElement;
+console.log(body);
+
+// TODO 6 – from the first .nav-link, use closest() to reach the header
+const headerFromLink = firstNavLink.closest("header");
+console.log(headerFromLink);
