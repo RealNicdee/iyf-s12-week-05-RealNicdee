@@ -176,7 +176,6 @@ firstNavLink.target = "_blank";
 firstNavLink.rel = "noopener";
 
 // TODO 3 – read the article's data-id and data-category; add data-status="reviewed"
-const article = document.querySelector("article");
 console.log(article.dataset.id);        // "42"
 console.log(article.dataset.category);  // "tech"
 article.dataset.status = "reviewed";
@@ -185,3 +184,4 @@ article.dataset.status = "reviewed";
 const contentParagraphs = document.querySelectorAll(".content");
 contentParagraphs[0].classList.add("highlight");
 contentParagraphs[1].classList.toggle("accent");
+
