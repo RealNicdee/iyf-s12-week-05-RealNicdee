@@ -188,6 +188,12 @@ const contentParagraphs = document.querySelectorAll(".content");
 contentParagraphs[0].classList.add("highlight");
 contentParagraphs[1].classList.toggle("accent");
 
+// TODO 5 – THE INJECTION DEMO
+const userInput = `<img src="x" onerror="alert('I hacked it finally!')">`;
+
+unsafe.innerHTML = userInput;   // This will execute the onerror alert
+safe.textContent = userInput;   // This will display the string as text
+
 // ============================================
 // STEP 4 — Task 9.4: create, remove, clone
 // ============================================
