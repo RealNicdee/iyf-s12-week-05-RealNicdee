@@ -185,3 +185,36 @@ const contentParagraphs = document.querySelectorAll(".content");
 contentParagraphs[0].classList.add("highlight");
 contentParagraphs[1].classList.toggle("accent");
 
+// ============================================
+// STEP 4 — Task 9.4: create, remove, clone
+// ============================================
+
+// TODO 1 – write addNavItem(text, href)
+function addNavItem(text, href) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.classList.add("nav-link");
+  a.href = href;
+  a.textContent = text;          // use textContent as required
+  li.appendChild(a);
+  document.querySelector(".nav-list").appendChild(li);
+}
+
+// Call the function twice
+addNavItem("Blog", "#blog");
+addNavItem("Portfolio", "#portfolio");
+
+// TODO 2 – create a paragraph and insert it BEFORE the article's first paragraph
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "This is a brand new paragraph inserted at the top.";
+const firstParagraph = document.querySelector("article p");
+firstParagraph.before(newParagraph);
+
+// TODO 3 – clone the first nav li (deep), change its text to "Cloned", prepend it
+const firstLi = document.querySelector(".nav-list li");
+const clonedLi = firstLi.cloneNode(true);               // true = deep clone
+clonedLi.querySelector("a").textContent = "Cloned";
+document.querySelector(".nav-list").prepend(clonedLi);
+
+// TODO 4 – remove the footer
+footer.remove();
