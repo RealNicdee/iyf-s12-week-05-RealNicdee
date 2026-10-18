@@ -161,3 +161,27 @@ console.log(body);
 // TODO 6 – from the first .nav-link, use closest() to reach the header
 const headerFromLink = firstNavLink.closest("header");
 console.log(headerFromLink);
+
+
+// ============================================
+// STEP 3 — Task 9.3: change things
+// ============================================
+
+// TODO 1 – change the h1 text to something of yours
+h1.textContent = "My Awesome College";
+
+// TODO 2 – point the first .nav-link at MDN, open in a new tab
+firstNavLink.href = "https://developer.mozilla.org";
+firstNavLink.target = "_blank";
+firstNavLink.rel = "noopener";
+
+// TODO 3 – read the article's data-id and data-category; add data-status="reviewed"
+const article = document.querySelector("article");
+console.log(article.dataset.id);        // "42"
+console.log(article.dataset.category);  // "tech"
+article.dataset.status = "reviewed";
+
+// TODO 4 – add "highlight" to the first .content, toggle "accent" on the second
+const contentParagraphs = document.querySelectorAll(".content");
+contentParagraphs[0].classList.add("highlight");
+contentParagraphs[1].classList.toggle("accent");
