@@ -79,6 +79,9 @@ const check = (label, ok) => console.log(`${ok ? "✓" : "✗"} ${label}`);
 // ============================================
 
 
+// Below is my practice work.
+
+
 // ============================================
 // STEP 1 – Task 9.1: Select TEN ways. Store each in a const, then log it.
 // ============================================
@@ -167,7 +170,7 @@ console.log(headerFromLink);
 // STEP 3 — Task 9.3: change things
 // ============================================
 
-// TODO 1 – change the h1 text to something of yours
+// TODO 1 – change the h1 text to something new
 h1.textContent = "My Awesome College";
 
 // TODO 2 – point the first .nav-link at MDN, open in a new tab
