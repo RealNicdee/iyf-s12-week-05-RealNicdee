@@ -1,4 +1,5 @@
-# Week 5: DOM Manipulation — Interactive To-Do List
+# Week 5: DOM Manipulation
+## Interactive To-Do List
 
 **Live Demo:** https://RealNicdee.github.io/iyf-s12-week-05-RealNicdee/
 
@@ -35,6 +36,6 @@ I also completed the Lesson 9 & 10 practice exercises and the five daily challen
 
 ## Folder Structure
 - `index.html` + `styles.css` + `app.js` → To-Do List
-- `Lesson10/`  practice folder with `dom-practice.html` + `app.js` + `style.css`
-- `Lesson9/` practice folder with `dom.js` + `index.html`
+- `Lesson-10/`  practice folder with `dom-practice.html` + `app.js` + `style.css`
+- `Lesson-9/` practice folder with `dom.js` + `index.html`
 - `daily-challenges/` with Day 1–5 challenges
