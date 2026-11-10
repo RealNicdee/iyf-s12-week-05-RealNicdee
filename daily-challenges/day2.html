@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Elements</title>
+</head>
+<body>
+    <button id="add-para">Add Paragraph</button>
+    <div id="container"></div>
+
+    <script>
+        let count = 1;
+        const container = document.getElementById("container");
+
+        document.getElementById("add-para").addEventListener("click", function () {
+            const p = document.createElement("p");
+            p.textContent = `Paragraph number ${count}`;
+
+            const delBtn = document.createElement("button");
+            delBtn.textContent = "Delete";
+            delBtn.addEventListener("click", function () {
+                p.remove();
+            });
+
+            p.appendChild(document.createTextNode(" "));
+            p.appendChild(delBtn);
+            container.appendChild(p);
+            count++;
+        });
+    </script>
+</body>
+</html>
