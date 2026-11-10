@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content Copier</title>
+    <style>
+        .box { border: 1px solid #333; padding: 16px; margin: 10px; min-height: 80px; }
+    </style>
+</head>
+<body>
+    <div id="source" class="box">This is the source content. Copy me!</div>
+    <button id="copy-btn">Copy to Target</button>
+    <div id="target" class="box"></div>
+
+    <script>
+        document.getElementById("copy-btn").addEventListener("click", function () {
+            const sourceText = document.getElementById("source").textContent;
+            document.getElementById("target").textContent = sourceText;
+        });
+    </script>
+</body>
+</html>
