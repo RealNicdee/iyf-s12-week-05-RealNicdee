@@ -198,7 +198,7 @@ todoList.addEventListener("dblclick", function (event) {
         }
     });
 
-    // Optional: click outside also saves
+    // Addition: click outside also saves
     inputEdit.addEventListener("blur", function () {
         finishEdit(true);
     });
