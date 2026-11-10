@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Remover</title>
+</head>
+<body>
+    <img src="https://picsum.photos/200" alt="Random 1">
+    <img src="https://picsum.photos/201" alt="Random 2">
+    <img src="https://picsum.photos/202" alt="Random 3">
+    <br><br>
+    <button id="remove-images">Remove All Images</button>
+    <button id="toggle-images">Toggle Hide/Show</button>
+
+    <script>
+        document.getElementById("remove-images").addEventListener("click", function () {
+            document.querySelectorAll("img").forEach(img => img.remove());
+        });
+
+        let hidden = false;
+        document.getElementById("toggle-images").addEventListener("click", function () {
+            document.querySelectorAll("img").forEach(img => {
+                img.style.display = hidden ? "inline" : "none";
+            });
+            hidden = !hidden;
+        });
+    </script>
+</body>
+</html>
